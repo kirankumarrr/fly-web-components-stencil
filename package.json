@@ -34,5 +34,8 @@
     "jest-cli": "^27.4.5",
     "puppeteer": "^10.0.0"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT"
 }
