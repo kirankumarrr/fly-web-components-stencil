@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/web-components-stencil.esm.js"></script>
+  <script nomodule src="/build/web-components-stencil.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      --color-primary: lightblue;
+      font-family: sans-serif;
+    }
+
+    .side-nav li {
+      list-style: none;
+      padding: 1rem;
+    }
+
+    .side-nav a {
+      color: #000
+    }
+  </style>
+</head>
+
+<body>
+  <button id="side-drawer-btn">Open Side Menu</button>
+
+  <!-- <fly-side-drawer side-title="Main Menu">
+    <nav class="side-nav">
+      <ul>
+        <li>
+          <a href="/">A Link</a>
+
+        </li>
+        <li>
+          <a href="/">A Link2</a>
+
+        </li>
+        <li>
+          <a href="/">A Link3</a>
+
+        </li>
+      </ul>
+    </nav>
+  </fly-side-drawer> -->
+  <fly-stock-price stock-symbol="AAPL">Test</fly-stock-price>
+  <br />
+  <fly-stock-finder></fly-stock-finder>
+  <script>
+    const sideDrawerBtn = document.querySelector('#side-drawer-btn')
+    const sideDrawer = document.querySelector('fly-side-drawer');
+
+    sideDrawerBtn.addEventListener('click', () => {
+      if (!sideDrawer.opened) {
+        // sideDrawer.opened = true
+        sideDrawer.open()
+      }
+    })
+
+    // setTimeout(() => {
+    //   sideDrawer.title = 'New Main Menu'
+    // }, 3000)
+
+    const stockFinderEl = document.querySelector('fly-stock-finder');
+    stockFinderEl.addEventListener('flySymbolSelected', (event) => {
+    })
+
+  </script>
+</body>
+
+</html>
