@@ -133,7 +133,7 @@ export class StockPrice {
       <div class="stock-price">
         <form onSubmit={this.onFetchStockPrice.bind(this)}>
           <input id="stock-symbol" ref={el => (this.stockInput = el)} value={this.stockUserInput} onInput={this.onUserInput} />
-          <button type="submit" disabled={!this.isStockInputValid}>
+          <button type="submit" disabled={!this.isStockInputValid} class="stock-fetch">
             Fetch
           </button>
         </form>

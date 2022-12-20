@@ -1,0 +1,8 @@
+.stock-fetch {
+    display: block;
+    white-space: pre;
+}
+
+#stock-symbol{
+    width: 75%
+}
